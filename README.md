@@ -46,5 +46,5 @@ This Application allows users to:
 
 ## Screenshots
 
-Insert gif or link to demo
+![Opening Screen]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/Rohan-Gudimetla/IIITKare/blob/main/app/screenshots/Screenshot_20230202_214015.png))
 
