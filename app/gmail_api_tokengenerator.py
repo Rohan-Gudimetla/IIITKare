@@ -37,8 +37,8 @@ code = input('Enter the authorization code: ')
 
 # Exchange the authorization code for an access token and refresh token
 data = {"code":code,
-        "client_id":"969158176625-qi7kn0jibse4s9ij5v5d0soid0lsch8d.apps.googleusercontent.com",
-        "client_secret":"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",
+        "client_id":"XXXXXXX",
+        "client_secret":"XXXXXXX",
         "redirect_uri":"http://localhost",
         "grant_type":"authorization_code"}
 
