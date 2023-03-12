@@ -53,7 +53,7 @@ This Application allows users to:
 <img width="691" alt="Screenshot_20230202_214734" src="https://user-images.githubusercontent.com/97049524/224529559-48294f4a-e75c-4b68-aebe-69ff30180b19.png">
 <img width="759" alt="Screenshot_20230202_214541" src="https://user-images.githubusercontent.com/97049524/224529521-96c2aa81-ce7e-47b3-8a57-4b19774513b9.png">
 <img width="323" alt="Screenshot_20230202_214618" src="https://user-images.githubusercontent.com/97049524/224529543-88b5ff87-1fdc-4155-a44f-19733fded2ac.png">
-<img width="691" alt="Screenshot_20230202_214734" src="https://user-images.githubusercontent.com/97049524/224529559-48294f4a-e75c-4b68-aebe-69ff30180b19.png">
+
 
 <img width="323" alt="Screenshot_20230202_214837" src="https://user-images.githubusercontent.com/97049524/224529571-78e86dfb-ed2a-49a8-85cb-8c47f922e29e.png">
 <img width="754" alt="Screenshot_20230202_214915" src="https://user-images.githubusercontent.com/97049524/224529600-b7644ec5-aaf2-49a2-a03b-7dd9fa6a69c8.png">
