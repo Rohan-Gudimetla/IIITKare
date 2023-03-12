@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "969158176625",
-    "project_id": "iiitkare",
-    "storage_bucket": "iiitkare.appspot.com"
+    "project_number": "XXXXXXX",
+    "project_id": "XXXXXXX",
+    "storage_bucket": "XXXXXXX.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:969158176625:android:5648c4de324f18e81310d0",
+        "mobilesdk_app_id": "XXXXXXX",
         "android_client_info": {
           "package_name": "com.IIITKare"
         }
       },
       "oauth_client": [
         {
-          "client_id": "969158176625-3ipatkcp7c6nbhjokgubolp889nrlcgo.apps.googleusercontent.com",
+          "client_id": "XXXXXXX",
           "client_type": 1,
           "android_info": {
             "package_name": "com.IIITKare",
-            "certificate_hash": "cd54ec8d8639efb040d2dc23b1f735942066fa51"
+            "certificate_hash": "XXXXXXX"
           }
         },
         {
-          "client_id": "969158176625-2flfi7s74k9nsh941gvam4p4097clmcv.apps.googleusercontent.com",
+          "client_id": "XXXXXXX",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBxjx-lY3ZoRMC6_3QPKJLQ2OVmsDmYKtw"
+          "current_key": "XXXXXXX"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "969158176625-2flfi7s74k9nsh941gvam4p4097clmcv.apps.googleusercontent.com",
+              "client_id": "XXXXXXX",
               "client_type": 3
             }
           ]
