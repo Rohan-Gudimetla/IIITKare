@@ -72,7 +72,7 @@ This Application allows users to:
 
 <img width="326" alt="Screenshot_20230202_215513" src="https://user-images.githubusercontent.com/97049524/224529637-3f9b4115-f208-4bb6-a340-213495cb4dc6.png">
 
-##Developer
+## Developer
 
 Rohan Gudimetla
 [rohan.gudimetla07@gmail.com](rohan.gudimetla07@gmail.com)
