@@ -74,5 +74,4 @@ This Application allows users to:
 
 ## Developer
 
-Rohan Gudimetla
-[rohan.gudimetla07@gmail.com](rohan.gudimetla07@gmail.com)
+Rohan Gudimetla => [rohan.gudimetla07@gmail.com](rohan.gudimetla07@gmail.com)
