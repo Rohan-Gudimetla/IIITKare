@@ -1,0 +1,107 @@
+#:kivy 2.2.0
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Gradient kivy_gradient.Gradient
+<Button>:       #parent button: applies to all the other buttons
+    font_size:20
+    size_hint: 0.3, 0.05
+    background_color: 0.1, 0.5, 0.6, 1
+
+<TextInput>:
+    font_size: 15
+    size_hint: 0.3, 0.05
+
+<signup_window>:
+    name: "signup"
+    FloatLayout:
+        canvas.before:
+            Color:
+                
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                texture: Gradient.vertical(get_color_from_hex("b7f582"),get_color_from_hex("b4fa78"),get_color_from_hex("afff6b"),get_color_from_hex("afff6b"),get_color_from_hex("afff6b"),get_color_from_hex("88fa28"), get_color_from_hex("7dfa14"), get_color_from_hex("75fa05"), get_color_from_hex("6feb02"), get_color_from_hex("62cf02"), get_color_from_hex("56b502"), get_color_from_hex("479403"))
+
+        MDCard:
+            id: signup
+            pos_hint:{"center_x": .5, "top": .6}
+            color: "grey"
+            size_hint: .8, .55
+            opacity: .3
+
+        MDTextField:
+            id: uname
+            hint_text: "Enter your Name"
+            text: ""
+            
+            color_mode: 'custom'
+            # helper_text: "College MailID"
+            # helper_text_mode: "on_focus"
+            line_color_focus: get_color_from_hex('8a048c')
+            size_hint: .7, .1
+            pos_hint:{"center_x": 0.5,"top":0.6}
+            required : True
+
+        MDTextField:
+            id: mail
+            hint_text: "Enter your College Mail"
+            text: ""
+           
+            color_mode: 'custom'
+            # helper_text: "College MailID"
+            # helper_text_mode: "on_focus"
+            line_color_focus: get_color_from_hex('8a048c')
+            size_hint: .7, .1
+            pos_hint:{"center_x": 0.5,"top":0.5}
+            required : True
+        
+        MDTextField:
+            id: passw
+            hint_text: "Password"
+            text: ""
+            password: True
+           
+            color_mode: 'custom'
+            helper_text: "Create your Password"
+            helper_text_mode: "on_focus"
+            line_color_focus: get_color_from_hex('8a048c')
+            size_hint: .7, .1
+            pos_hint:{"center_x": 0.5,"top":0.4}
+            required : True
+
+        MDTextField:
+            id: repassw
+            hint_text: "Reenter Password"
+            text: ""
+            password: True
+           
+            color_mode: 'custom'
+            helper_text: "Reenter your Password"
+            helper_text_mode: "on_focus"
+            line_color_focus: get_color_from_hex('8a048c')
+            size_hint: .7, .1
+            pos_hint:{"center_x": 0.5,"top":0.3}
+            required : True
+
+        MDFillRoundFlatButton:
+            pos_hint:{"x": 0.1,"top":0.1}
+            id: signup
+            text: "Sign Up"
+            on_release: app.newUser()
+            pos_hint:{"center_x": 0.5,"top":0.15}
+            size_hint: .5, .07
+            id: btn
+            text: "Sign Up"
+            md_bg_color: get_color_from_hex("a1124b")
+            on_press: self.md_bg_color = get_color_from_hex("133261")
+        
+        # Button:
+        #     pos_hint:{"x": 0.1,"top":0.4}
+        #     id: logi_signup
+        #     text: "Login"
+
+        Image:
+            source: 'logo1.png'
+            pos_hint: {'center_x': 0.5, 'top': 0.997}
+            size_hint: .36, .36
+            
+        

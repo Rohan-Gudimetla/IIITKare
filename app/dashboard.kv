@@ -1,0 +1,135 @@
+#:kivy 2.2.0
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Gradient kivy_gradient.Gradient
+
+<Button>:       #parent button: applies to all the other buttons
+    font_size:20
+    size_hint: 0.3, 0.05
+    background_color: 0.1, 0.5, 0.6, 1
+
+<dashboard_window>:
+    name: "dashboard"
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba:(1, 1, 1, 1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        MDTopAppBar:
+            title:'DASHBOARD'
+            pos_hint: {"top" : 1}
+            md_bg_color : app.theme_cls.accent_color
+            specific_text_color: 'black'
+            elevation: 4
+            left_action_items: [["home-account", lambda x: app.callback()]]
+        
+        Image:
+            source: 'logo2.png'
+            pos_hint: {'x': 0.62, 'y': 0.75}
+            size_hint: .4, .4
+
+        MDCard:
+            id: namecard
+            pos_hint:{"center_x": .5, "top": .85}
+            md_bg_color: get_color_from_hex('b7fa91')
+            size_hint: .95, .13
+            opacity: .5
+
+        MDLabel:
+            id: welcomename
+            text: 'Welcome Back, '
+            color: get_color_from_hex('103278')
+            pos_hint: {'center_x': .55, 'y': .3}
+            font_size: '25dp'
+            bold: True
+
+        MDLabel:
+            id: nocomp
+            text: '00'
+            color: get_color_from_hex('f5931b')
+            pos_hint: {'center_x': .75, 'y': .13}
+            font_size: '30dp'
+            bold: True
+
+        MDLabel:
+            id: nosol
+            text: '00'
+            color: get_color_from_hex('f5931b')
+            pos_hint: {'x': .65, 'y': .13}
+            font_size: '30dp'
+            bold: True
+
+        MDLabel:
+            id: texti
+            text: 'Registered'
+            color: 'black'     #get_color_from_hex('f5931b')
+            pos_hint: {'center_x': .72, 'y': .1}
+            font_size: '13dp'
+            bold: True
+
+        MDLabel:
+            id: texti
+            text: 'Solved'
+            color: 'black'     #get_color_from_hex('f5931b')
+            pos_hint: {'x': .65, 'y': .1}
+            font_size: '13dp'
+            bold: True
+
+
+        MDCard:
+            pos_hint:{"x": 0.09,"top":0.5}
+            size_hint: .4, .2 
+            id: compreg
+            text: "Register a new Complaint"
+            font_size: '25dp'
+           # on_release: app.root.current= 'complaint'
+            on_release: 
+                app.root.current= 'choosecomp'
+                root.manager.transition.direction = 'left'
+            md_bg_color: get_color_from_hex("0c9e09")
+            ripple_behavior: True
+
+            MDLabel:
+                text: ' Register a new Complaint'
+                font_size: '18dp'
+                color: get_color_from_hex('cefc92')
+                pos_hint: {'center_x': .3}
+                bold: True
+                center_x: .5
+
+        MDCard:
+            pos_hint:{"x": 0.55, "top": 0.5}
+            size_hint: .4, .2 
+            id: statuscomp
+            md_bg_color: get_color_from_hex("fa68fc")
+            ripple_behavior: True
+            on_release: app.checkStatus()
+                # app.root.current= 'status'
+                # root.manager.transition.direction = 'left'
+
+            MDLabel:
+                text: ' Check Status of your Complaints'
+                font_size: '18dp'
+                color: get_color_from_hex('cefc92')
+                pos_hint: {'center_x': .3}
+                bold: True
+
+            #on_release: app.root.current= 'login'
+        MDCard:
+            pos_hint:{"x": 0.3, "top": 0.27}
+            size_hint: .4, .2 
+            id: signout
+            on_release: app.signOut()
+            md_bg_color: get_color_from_hex("f53d14")
+            ripple_behavior: True
+
+            MDLabel:
+                text: '   Sign Out'
+                font_size: '18dp'
+                color: get_color_from_hex('cefc92')
+                pos_hint: {'center_x': .3}
+                bold: True
+
+

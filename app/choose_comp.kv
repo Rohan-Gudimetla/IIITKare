@@ -1,0 +1,184 @@
+#:kivy 2.2.0
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Gradient kivy_gradient.Gradient
+
+<Button>:       #parent button: applies to all the other buttons
+    font_size:20
+    size_hint: 0.3, 0.05
+    background_color: 0.1, 0.5, 0.6, 1
+
+<choosecomp_window>:
+    name: "choosecomp"
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba:(1, 1, 1, 1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        MDTopAppBar:
+            title:'Categories'
+            pos_hint: {"top" : 1}
+            md_bg_color : app.theme_cls.accent_color
+            specific_text_color: 'black'
+            elevation: 4
+            left_action_items: [["home-account", lambda x: app.callback()]]
+        
+        Image:
+            source: 'logo2.png'
+            pos_hint: {'x': 0.62, 'y': 0.75}
+            size_hint: .4, .4
+
+
+        MDCard:
+            id: btn
+            text: "Press me !!"
+            size_hint: .9, .1
+            pos_hint: {'top': .8, 'x': .05}
+            md_bg_color: get_color_from_hex('c9f788')
+            opacit: .3
+            on_parent: drop_content.dismiss()
+            on_release: drop_content.open(self)
+
+            MDLabel:
+                id: btno
+                text: '  +    ACADEMICS'
+                font_size: '25dp'
+                color: 'black' #get_color_from_hex('cefc92')
+                pos_hint: {'center_x': .3}
+                bold: True
+                center_x: .5
+
+        DropDown:
+            id: drop_content
+            on_select: btn.text = f'{args[1]}' # see note below
+            pos_hint: {'top': .687, 'x': .05}
+            
+            Button:
+                id: btn1
+                text: '[b]Fees'
+                size_hint: None, None
+                #pos_hint: {'center_x': .5}
+                background_color: 255,130,102,1
+                color: 'black'
+                height: 35
+                width: 250
+                on_release: drop_content.select('First Item')
+                markup: True
+            Button:
+                id: btn3
+                text: '[b]Faculty'
+                background_color: (255,130,102,1)
+                color: 'black'
+                size_hint: None, None
+                height: 35
+                width: 250
+                on_release: drop_content.select('Third Item')
+                markup: True
+
+            Button:
+                id: btn3
+                text: '[b]Management'
+                background_color: (255,130,102,1)
+                color: 'black'
+                size_hint: None, None
+                height: 35
+                width: 250
+                on_release: drop_content.select('Third Item')
+                markup: True
+
+        MDCard:
+            id: hbtn
+            text: "Press me !!"
+            size_hint: .9, .1
+            pos_hint: {'top': .65, 'x': .05}
+            md_bg_color: get_color_from_hex('c9f788')
+            opacit: .3
+            # on_parent: drop_content.dismiss()
+            # on_release: drop_content.open(self)
+
+            MDLabel:
+                id: hbtno
+                text: '  +    HOSTEL'
+                font_size: '25dp'
+                color: 'black' #get_color_from_hex('cefc92')
+                pos_hint: {'center_x': .3}
+                bold: True
+                center_x: .5
+
+            
+            
+        MDCard:
+            id: mbtn
+            text: "Press me !!"
+            size_hint: .9, .1
+            pos_hint: {'top': .5, 'x': .05}
+            md_bg_color: get_color_from_hex('c9f788')
+            opacit: .3
+            # on_parent: drop_content.dismiss()
+            # on_release: drop_content.open(self)
+
+            MDLabel:
+                id: mbtno
+                text: '  +    MESS'
+                font_size: '25dp'
+                color: 'black' #get_color_from_hex('cefc92')
+                pos_hint: {'center_x': .3}
+                bold: True
+                center_x: .5
+
+        MDCard:
+            id: sbtn
+            text: "Press me !!"
+            size_hint: .9, .1
+            pos_hint: {'top': .35, 'x': .05}
+            md_bg_color: get_color_from_hex('c9f788')
+            opacit: .3
+            # on_parent: drop_content.dismiss()
+            # on_release: drop_content.open(self)
+
+            MDLabel:
+                id: mbtno
+                text: '  +    SECURITY'
+                font_size: '25dp'
+                color: 'black' #get_color_from_hex('cefc92')
+                pos_hint: {'center_x': .3}
+                bold: True
+                center_x: .5
+
+        MDFillRoundFlatButton:
+            id: login
+            pos_hint:{"center_x": 0.75, "top": 0.17}
+            size_hint: .3, .07  
+            text: "[b]TESTER"
+            #on_press: self.md_bg_color = get_color_from_hex("a1124b")
+            on_release:
+                app.root.current= 'complaint'
+                root.manager.transition.direction = 'left'
+            md_bg_color: get_color_from_hex("f50505")
+            color: 'white'
+            markup: True
+
+
+
+
+        # Spinner:
+        #     id: 'academics'
+        #     text: 'I.  Academics'
+        #     #color: 'black'          #get_color_from_hex('f5931b')
+        #     values: ["shit", "bullshit", "redbullshit"]
+        #     pos_hint: {'center_x': .35, 'top': .78}
+        #   #  size_hint: .5, .5
+        #     font_size: '30dp'
+        #     sync_height:
+        #     bold: True
+        #     #on_release: self.open()
+            #on_text:
+             #   print("The spinner {} has text {}".format(self, self.text))
+
+
+        
+            
+
+        

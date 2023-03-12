@@ -1,0 +1,58 @@
+#:kivy 2.2.0
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Gradient kivy_gradient.Gradient
+#:import ThemeManager kivymd.theming.ThemeManager
+
+<Button>:       #parent button: applies to all the other buttons
+    font_size:20
+    size_hint: 0.3, 0.05
+    background_color: 0.1, 0.5, 0.6, 1
+
+<MD3Card>
+    padding: 4
+    size_hint: None, None
+    size: "200dp", "100dp"
+
+<ls_window>:
+    name: "ls"
+    FloatLayout:
+        canvas.before:
+            
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                texture: Gradient.vertical(get_color_from_hex("b7f582"),get_color_from_hex("b4fa78"),get_color_from_hex("afff6b"),get_color_from_hex("afff6b"),get_color_from_hex("afff6b"),get_color_from_hex("88fa28"), get_color_from_hex("7dfa14"), get_color_from_hex("75fa05"), get_color_from_hex("6feb02"), get_color_from_hex("62cf02"), get_color_from_hex("56b502"), get_color_from_hex("479403"))
+
+        MDCard:
+            id: lscard
+            pos_hint:{"center_x": .5, "top": .6}
+            color: "grey"
+            size_hint: .8, .5
+            opacity: .3
+            
+
+        MDFillRoundFlatButton:
+            pos_hint:{"center_x": 0.5,"top":.5}
+            size_hint: .5, .07  
+            id: signup
+            text: "Sign Up"
+            on_press: self.md_bg_color = get_color_from_hex("a1124b")
+            on_release:
+                app.root.current= 'signup'
+                root.manager.transition.direction = 'left'
+            md_bg_color: get_color_from_hex("133261")
+        MDFillRoundFlatButton:
+            id: login
+            pos_hint:{"center_x": 0.5, "top": 0.3}
+            size_hint: .5, .07  
+            text: "Login"
+            on_press: self.md_bg_color = get_color_from_hex("a1124b")
+            on_release:
+                app.root.current= 'login'
+                root.manager.transition.direction = 'left'
+            md_bg_color: get_color_from_hex("133261")
+        
+        Image:
+            source: 'logo1.png'
+            pos_hint: {'center_x': 0.5, 'top': 0.997}
+            size_hint: .46, .46

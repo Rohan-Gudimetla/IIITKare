@@ -1,0 +1,93 @@
+#:kivy 2.2.0
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Gradient kivy_gradient.Gradient
+#:import ThemeManager kivymd.theming.ThemeManager
+<Button>:       #parent button: applies to all the other buttons
+    font_size:20
+    size_hint: 0.3, 0.05
+    background_color: 0.1, 0.5, 0.6, 1
+
+<MD3Card>
+    padding: 4
+    size_hint: .7, .3
+    size: "200dp", "100dp"
+
+<MDTextField>:
+    font_size: 15
+    size_hint: 0.3, 0.05
+
+<complaint_window>:
+    name: "complaint"
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba:(1, 1, 1, 1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        MDTopAppBar:
+            title:'Complaint'
+            pos_hint: {"top" : 1}
+            md_bg_color : app.theme_cls.accent_color
+            specific_text_color: 'black'
+            elevation: 4
+            left_action_items: [["home-account", lambda x: app.callback()]]
+        
+        Image:
+            source: 'logo2.png'
+            pos_hint: {'x': 0.62, 'y': 0.75}
+            size_hint: .4, .4
+
+
+        MDCard:
+            id: compcard
+            pos_hint:{"center_x": .5, "top": .85}
+            md_bg_color: get_color_from_hex('DAFF2C')
+            size_hint: .88, .8
+            opacity: .7
+        
+
+
+        MDTextField:
+            id: subj
+            hint_text: "Enter your Subject"
+            mode: 'fill'
+            fill_color_normal: get_color_from_hex('FFFB9E')
+            text: ""
+            color: 'black'
+            
+            
+            pos_hint:{"x": 0.1,"top":0.73}
+            size_hint: .75, None
+            markup: True
+            height: '250dp'
+        
+        MDTextField:
+            id: msg
+            hint_text: "Enter Body of your Complaint"
+            text: ""
+            mode: 'fill'
+            fill_color_normal: get_color_from_hex('FFFB9E')
+            size_hint: .75, .4
+            pos_hint:{"x": 0.1,"top":0.55}
+        MDFillRoundFlatButton:
+            pos_hint:{"x": 0.62,"top":0.13}
+            size_hint: .3, .05
+            id: send
+            md_bg_color: get_color_from_hex('175408')
+            color: 'white'
+            text: "Submit"
+            on_release: app.sendComp()
+
+        MDLabel:
+            text: 'Enter a short subject of Complaint:'
+            color: 'red'#get_color_from_hex('1C690A')
+            pos_hint: {"x": 0.1,"y":0.27}
+            bold: True
+
+        MDLabel:
+            text: 'Describe your Complaint:'
+            color: 'red'#get_color_from_hex('1C690A')
+            pos_hint: {"x": 0.1,"y":0.09}
+            bold: True

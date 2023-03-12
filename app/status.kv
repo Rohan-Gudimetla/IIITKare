@@ -1,0 +1,67 @@
+#:kivy 2.2.0
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Gradient kivy_gradient.Gradient
+#:import ThemeManager kivymd.theming.ThemeManager
+<Button>:       #parent button: applies to all the other buttons
+    font_size:20
+    size_hint: 0.3, 0.05
+    background_color: 0.1, 0.5, 0.6, 1
+
+<status_window>:
+    name: "complaint"
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba:(1, 1, 1, 1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        MDTopAppBar:
+            title:'Status'
+            pos_hint: {"top" : 1}
+            md_bg_color : app.theme_cls.accent_color
+            specific_text_color: 'black'
+            elevation: 4
+            left_action_items: [["home-account", lambda x: app.callback()]]
+        
+        Image:
+            source: 'logo2.png'
+            pos_hint: {'x': 0.62, 'y': 0.75}
+            size_hint: .4, .4
+
+        MDCard:
+            id: compcard
+            
+            size_hint: .9, .4
+            pos_hint: {'top': .85, 'x': .05}
+            md_bg_color: get_color_from_hex('c9f788')
+            opacity: 1
+
+
+            MDLabel:
+                id: compte
+                text: 'Complaint:  '
+                font_size: '12dp'
+                color: 'black' #get_color_from_hex('cefc92')
+                pos_hint: {'center_x': .35, 'top': 1}
+                bold: True
+                center_x: .5
+
+        MDCard:
+            id: replycard
+            
+            size_hint: .9, .35
+            pos_hint: {'top': .42, 'x': .05}
+            md_bg_color: get_color_from_hex('ed4a4a')
+            opacity: 1
+
+
+            MDLabel:
+                id: replyte
+                text: 'Reply:  '
+                font_size: '12dp'
+                color: 'black' #get_color_from_hex('cefc92')
+                pos_hint: {'center_x': .35, 'top': 1}
+                bold: True
+                center_x: .5
