@@ -47,4 +47,5 @@ This Application allows users to:
 ## Screenshots
 
 ![Opening Screen]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/Rohan-Gudimetla/IIITKare/blob/main/app/screenshots/Screenshot_20230202_214015.png))
-
+**Opening Screen**
+<img width="337" alt="Screenshot_20230202_214015" src="https://user-images.githubusercontent.com/97049524/224529497-96aee3ca-7a30-444d-ac84-aa9a247d3bd2.png">
