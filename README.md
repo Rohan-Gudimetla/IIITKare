@@ -71,3 +71,8 @@ This Application allows users to:
 <img width="323" alt="Screenshot_20230202_215456" src="https://user-images.githubusercontent.com/97049524/224529633-57d8b886-00ad-45de-806a-1b499833cdf9.png">
 
 <img width="326" alt="Screenshot_20230202_215513" src="https://user-images.githubusercontent.com/97049524/224529637-3f9b4115-f208-4bb6-a340-213495cb4dc6.png">
+
+##Developer
+
+Rohan Gudimetla
+[rohan.gudimetla07@gmail.com](rohan.gudimetla07@gmail.com)
