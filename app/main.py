@@ -30,14 +30,14 @@ import os
 from email.mime.text import MIMEText
 # import jwt #used for obtaining the UID from the IDtoken obtained on printing user.
 firebaseConfig = {
-  'apiKey': "AIzaSyAldG5tlW1XUKA4i1lN1w4aGlVpvfafkPc",
-  'authDomain': "iiitkare.firebaseapp.com",
-  'projectId': "iiitkare",
-  'storageBucket': "iiitkare.appspot.com",
-  'messagingSenderId': "969158176625",
-  'appId': "1:969158176625:web:434af2cb546a29c81310d0",
-  'measurementId': "G-D1SR81CSKD",
-  'databaseURL' : "https://iiitkare.firebaseio.com"
+  'apiKey': "XXXXXXX",
+  'authDomain': "XXXXXXX.firebaseapp.com",
+  'projectId': "XXXXXXX",
+  'storageBucket': "XXXXXXX.appspot.com",
+  'messagingSenderId': "XXXXXXX",
+  'appId': "XXXXXXX",
+  'measurementId': "XXXXXXX",
+  'databaseURL' : "https://XXXXXXX.firebaseio.com"
 }
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
